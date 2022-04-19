@@ -1,0 +1,8 @@
+@import 'src/scss/mixins';
+
+.image {
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  @include FlexCenter;
+}

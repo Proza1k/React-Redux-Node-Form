@@ -1,0 +1,33 @@
+@import 'src/scss/mixins';
+
+.auth_window {
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  height: 100%;
+  padding: 24px 32px;
+  border-radius: $border-radius;
+  background-color: $color-background-secondary;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+
+  @include mobile {
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @include FlexBetweenColumn;
+
+  &__box {
+      @include FlexCenterColumn;
+  }
+
+  &__input {
+      width: 100%;
+  }
+}

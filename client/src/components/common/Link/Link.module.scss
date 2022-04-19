@@ -1,0 +1,25 @@
+@import 'src/scss/mixins';
+
+.link {
+  color: $color-link-text;
+  transition: color 0.3s ease-in-out;
+
+  :hover {
+    color: $color-link-hover-text;
+  }
+
+  &_small {
+    font-size: $font-size-small;
+    font-weight: $font-weight-small;
+  }
+
+  &_medium {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+  }
+
+  &_large {
+    font-size: $font-size-small;
+    font-weight: $font-weight-large;
+  }
+}

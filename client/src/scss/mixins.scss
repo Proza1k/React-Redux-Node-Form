@@ -1,0 +1,46 @@
+@import 'src/scss/variables';
+@import 'src/scss/mixins/devices';
+
+@mixin FlexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin FlexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin FlexCenterColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin FlexBetweenColumn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@mixin FlexBetweenRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin FlexBetweenCenterColumn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@mixin FlexCenterBetweenRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}

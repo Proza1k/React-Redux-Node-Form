@@ -1,0 +1,20 @@
+@import 'src/scss/mixins';
+
+.heading {
+  color: $color-text;
+
+  &_small {
+    font-size: $heading-font-size-small;
+    font-weight: $font-weight-small;
+  }
+
+  &_medium {
+    font-size: $heading-font-size-medium;
+    font-weight: $font-weight-medium;
+  }
+
+  &_large {
+    font-size: $heading-font-size-large;
+    font-weight: $font-weight-large;
+  }
+}

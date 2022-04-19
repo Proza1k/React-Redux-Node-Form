@@ -1,0 +1,86 @@
+@import 'src/scss/mixins';
+
+.button {
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+  background-color: $color-background-button;
+  border-radius: $border-radius;
+  padding: 6px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  @include FlexCenter;
+
+  &:hover::before,
+  &:focus::before {
+    -webkit-animation-name: animation-hover-button;
+    animation-name: animation-hover-button;
+  }
+
+  &_icon + &_text {
+    margin-left: 8px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    border: $color-background-button solid 4px;
+    border-radius: $border-radius;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+
+  &_small {
+    font-size: $font-size-small;
+    font-weight: $font-weight-small;
+    width: 20px;
+    height: 20px;
+  }
+
+  &_medium {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    height: 30px;
+  }
+
+  &_large {
+    font-size: $font-size-large;
+    font-weight: $font-weight-large;
+    height: 40px;
+  }
+
+  &_icon {
+    fill: $color-text-secondary;
+  }
+
+  &_small &_icon {
+    width: 16px;
+    height: 10px;
+  }
+
+  &_medium &_icon {
+    width: 18px;
+    height: 20px;
+  }
+
+  &_large &_icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@keyframes animation-hover-button {
+  100% {
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    opacity: 0;
+    border-radius: $border-radius;
+  }
+}

@@ -1,0 +1,44 @@
+@import 'src/scss/mixins';
+
+.contact_list {
+  width: 100%;
+
+  &__item {
+    position: relative;
+
+    @include FlexBetweenRow;
+  }
+
+  &__value {
+    text-align: right;
+    border-left: 2px solid $color-border-secondary;
+  }
+
+  &__name,
+  &__value {
+    padding: 30px 20px;
+    width: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__button {
+    top: 0;
+    bottom: 0;
+    right: calc(50% - 16px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    padding: 5px 0;
+    @include FlexCenterColumn;
+  }
+
+  &__item:hover &__button {
+    opacity: 1;
+  }
+
+  &__item:hover &__name,
+  &__item:hover &__value {
+    background: $color-background-first;
+  }
+}
